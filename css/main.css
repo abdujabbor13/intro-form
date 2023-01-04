@@ -66,7 +66,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family:var(--font-inter);
-  background-color:var(--wite);
+  background-color: #e7e7e7;
   color:var(--text-color);
 }
 
@@ -86,8 +86,6 @@ img {
   margin-right: auto;
 }
 
-
-
 /* MAIN CONTENT  */
 .main-content {
   flex-grow: 1;
@@ -98,7 +96,6 @@ img {
 /* HERO  */
 .intro-page {
   display: flex;
-  align-items: center;
 }
 
 .hero {
@@ -110,7 +107,6 @@ img {
   background-color: #777;
   color:var(--wite);
   overflow: hidden;
-  margin-right: 12px;
 }
 
 .hero-main {
@@ -157,4 +153,107 @@ img {
   padding-bottom: 29px;
   text-align: center;
   background-color: var(--green);
+  transition: opacity 0.3s ease;
+}
+
+.hero-bottom:hover {
+  opacity: 0.8;
+}
+
+.hero-bottom:active {
+  opacity: 0.6;
+}
+
+
+/* FORM  */
+.form {
+  width: 100%;
+  overflow: hidden;
+  max-width: 570px;
+  padding: 55px 60px 40px;
+  border-radius:20px;
+  background-color: var(--wite);
+  margin-left: 12px;
+}
+
+.form-heading {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 68px;
+}
+
+.form-content {
+  margin-bottom: 63px;
+}
+
+.form-regest {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border:none;
+  border-bottom: 1px solid #555;
+}
+
+.form-regest:focus {
+  border:#000;
+  font-weight: 600;
+  color:#000;
+}
+
+.form-regest:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.form-submit {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family:var(--font-inter);
+  font-weight: 600;
+  border-radius:10px;
+  border:none;
+  background-color: var(--purple);
+  color:var(--wite);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #3A2BF8;
+}
+
+.form-submit:active {
+  background-color:var(--purple);
+}
+
+.form-text {
+  font-family:var(--font-inter);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color:#555;
+}
+
+.form-text a {
+  font-weight: 500;
+  color:var(--red)
+}
+
+/* CSS RETINA  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero-main {
+    background-image: url(../img/image-bg@2x.jpg);
+  }
 }
